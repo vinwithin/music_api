@@ -1,5 +1,5 @@
 const Hapi = require('@hapi/hapi');
-const {getMusic, giveAccess} = require('./src/handler')
+const {getMusic, getAlbum} = require('./src/handler')
 
 const init = async () => {
     const server = Hapi.server({
@@ -15,8 +15,8 @@ const init = async () => {
         },
         {
             method: 'GET',
-            path: '/callback',
-            handler: giveAccess
+            path: '/album',
+            handler: getAlbum
         },
         
         
