@@ -29,7 +29,8 @@ const getMusic = async(request, h) => {
       "user-library-read",
       "playlist-read-collaborative",
       "streaming"
-    ], 'some-state-of-my-choice')
-   return authorizeUrl;
+    ], 'some-state-of-my-choice');
+
+   return h.redirect(authorizeUrl);
 }
 module.exports = getMusic;
